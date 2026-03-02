@@ -1,7 +1,4 @@
 import 'package:flutter/material.dart';
-
-import '../constants/app_colors.dart';
-
 class CustomBotton extends StatelessWidget {
   const CustomBotton({super.key, required this.text, required this.onPressed, required this.color});
 

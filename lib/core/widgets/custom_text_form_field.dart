@@ -2,6 +2,23 @@
 
 import 'package:flutter/material.dart';
 
+class CustomTextfield extends StatelessWidget {
+  TextEditingController? controller;
+
+  CustomTextfield({super.key, this.controller});
+
+  @override
+  Widget build(BuildContext context) {
+    return TextField(
+      controller: controller,
+      decoration: InputDecoration(
+        border: OutlineInputBorder(borderRadius: BorderRadius.circular(10)),
+      ),
+    );
+  }
+}
+
+/*
 class CustomTextFormField extends StatelessWidget {
   const CustomTextFormField({super.key, this.controller, this.validator, this.hintText});
 
@@ -25,3 +42,4 @@ class CustomTextFormField extends StatelessWidget {
     ); // TextFormField
   }
 }
+*/
