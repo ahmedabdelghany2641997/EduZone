@@ -1,13 +1,16 @@
 import 'package:eduzone/core/networking/supabase_services.dart';
 import 'package:flutter/material.dart';
-import 'package:supabase_flutter/supabase_flutter.dart';
-
-import 'features/auth/persentation/screen/login_screen.dart';
-import 'features/auth/persentation/screen/signup_screen.dart';
+import 'features/layout/presentaion/screens/layout_bottom_nav_bar_screen.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  await SupabaseServices.init();
+
+  try {
+    await SupabaseServices.init();
+  } catch (e) {
+    debugPrint("Supabase Initialization Error: $e");
+  }
+
   runApp(const MyApp());
 }
 
@@ -16,6 +19,9 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(debugShowCheckedModeBanner: false, home: SignupScreen());
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: LayoutBottomNavBarScreen(),
+    );
   }
 }

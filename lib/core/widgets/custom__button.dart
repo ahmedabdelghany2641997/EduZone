@@ -23,7 +23,7 @@ class CustomBotton extends StatelessWidget {
           onPressed: onPressed,
           child: Text(
             text,
-            style: TextStyle(fontSize: 14, fontWeight: FontWeight.w500,color: Colors.black),
+            style: TextStyle(fontSize: 14, fontWeight: FontWeight.w500,color: Colors.white),
             textAlign: TextAlign.center,
           ), // Text
         ), // TextButton

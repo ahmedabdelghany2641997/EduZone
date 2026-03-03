@@ -26,4 +26,11 @@ class AppTextStyle{
     fontStyle: .normal
 
   );
+  static TextStyle s18colorWhite (BuildContext context)=>TextStyle(
+      fontSize: 13,
+      fontWeight: .w400,
+      color: Colors.white,
+      fontStyle: .normal
+
+  );
 }

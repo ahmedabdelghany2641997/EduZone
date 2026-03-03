@@ -6,15 +6,21 @@ class CustomTextfield extends StatelessWidget {
   TextEditingController? controller;
  Widget? prefixIcon;
  String? hintText;
-  CustomTextfield({super.key, this.controller,  this.prefixIcon,  this.hintText, });
+  String? Function(String?)? validator;
+  CustomTextfield({super.key,this.validator, this.controller,  this.prefixIcon,  this.hintText, });
   @override
   Widget build(BuildContext context) {
-    return TextField(
+    return TextFormField(
+
+      validator:validator ,
       controller: controller,
       decoration: InputDecoration(
+        fillColor:Colors.white,
+        label: Text("what are you looking for?"),
+        filled: true,
         prefixIcon:prefixIcon ,
         hintText:hintText ,
-        border: OutlineInputBorder(borderRadius: BorderRadius.circular(10)),
+        border: OutlineInputBorder(borderRadius: BorderRadius.circular(15)),
       ),
     );
   }
